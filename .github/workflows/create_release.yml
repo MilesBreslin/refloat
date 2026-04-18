@@ -56,8 +56,8 @@ jobs:
 
       - name: Rename Package File
         run: |
-          mv refloat.vescpkg refloat-${{env.VERSION}}.vescpkg
-          mv src/package_lib.elf refloat-${{env.VERSION}}.elf
+          cp result/refloat.vescpkg refloat-${{env.VERSION}}.vescpkg
+          cp result/refloat.elf refloat-${{env.VERSION}}.elf
 
       - name: Install Changelog Generation Dependencies
         run: sudo apt-get install python3-git
